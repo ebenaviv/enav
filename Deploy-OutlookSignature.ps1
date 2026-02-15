@@ -1,5 +1,5 @@
 param(
-    [string]$BaseUrl      = "https://drive.google.com/drive/folders/18_gb-mQeNeVSGvAbbRoUM2LIcnQ2dxvy?usp=sharing",
+    [string]$BaseUrl      = "https://raw.githubusercontent.com/ebenaviv/enav/refs/heads/main/",
     [string]$SigFolderName = "EnavSignature",
     [switch]$VerboseLog
 )
@@ -304,4 +304,5 @@ try {
 }
 
 Write-Log "=== Deployment Completed Successfully ==="
+
 exit 0
