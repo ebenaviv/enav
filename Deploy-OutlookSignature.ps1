@@ -55,7 +55,7 @@ Get-ChildItem -Path $localSigPath -Filter "$SigFolderName*" -ErrorAction Silentl
 
 # --- 3. Smart download (BITS + fallback) ---
 
-$filesToDownload = @("signature_template.htm", "signature_template1.csv", "banner.jpg", "enav.gif", "facebook", "instagram.png", "linkedin.png", "youtube.png",)
+$filesToDownload = @("signature_template.htm", "signature_template1.csv", "banner.jpg", "enav.gif", "facebook.png", "instagram.png", "linkedin.png", "youtube.png",)
 
 foreach ($file in $filesToDownload) {
     $dest = Join-Path $localAssetsPath $file
@@ -306,6 +306,7 @@ try {
 Write-Log "=== Deployment Completed Successfully ==="
 
 exit 0
+
 
 
 
