@@ -1,5 +1,5 @@
 param(
-    [string]$BaseUrl      = "https://github.com/ebenaviv/enav/blob/HTML_LinkedImages/",
+    [string]$BaseUrl      = "https://raw.githubusercontent.com/ebenaviv/enav/refs/heads/HTML_LinkedImages/",
     [string]$SigFolderName = "EnavSignature",
     [switch]$VerboseLog
 )
@@ -306,6 +306,7 @@ try {
 Write-Log "=== Deployment Completed Successfully ==="
 
 exit 0
+
 
 
 
