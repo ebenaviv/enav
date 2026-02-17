@@ -55,7 +55,7 @@ Get-ChildItem -Path $localSigPath -Filter "$SigFolderName*" -ErrorAction Silentl
 
 # --- 3. Smart download (BITS + fallback) ---
 
-$filesToDownload = @("signature_template.htm", "signature_template.csv")
+$filesToDownload = @("signature_template.htm", "signature_template1.csv")
 
 foreach ($file in $filesToDownload) {
     $dest = Join-Path $localAssetsPath $file
@@ -84,7 +84,7 @@ foreach ($file in $filesToDownload) {
 }
 
 # Validate files
-$csvPath      = Join-Path $localAssetsPath "signature_template.csv"
+$csvPath      = Join-Path $localAssetsPath "signature_template1.csv"
 $templatePath = Join-Path $localAssetsPath "signature_template.htm"
 
 if (!(Test-Path $csvPath) -or (Get-Item $csvPath).Length -lt 10) {
@@ -306,4 +306,5 @@ try {
 Write-Log "=== Deployment Completed Successfully ==="
 
 exit 0
+
 
